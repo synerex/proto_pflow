@@ -12,18 +12,21 @@ message PFlow
 {
     uint32 id = 1;
     string area = 2;
-    google.protobuf.Timestamp start_time= 3;
-    google.protobuf.Timestamp end_time= 4;
-    repeated Point data = 5;   // message has several point data.
-    bytes option = 6;  // option used for each storage type.(Not yet used)
+    string type = 3;
+    google.protobuf.Timestamp start_time = 4;
+    google.protobuf.Timestamp end_time = 5;
+    repeated Operation operation = 6;   // message has several Operation data.
+    bytes option = 7;  // option
 }
 
-message Point 
+message Operation 
 {
     uint32 id = 1;
     float longitude = 2;
     float latitude = 3;
     float z = 4;
-    google.protobuf.Timestamp timestamp= 5;
-    bytes option = 6;  // option used for each storage type.(Not yet used)
+    string type = 5;
+    google.protobuf.Timestamp timestamp = 6;
+    float elapsedtime = 7;
+    bytes option = 8;  // option
 }
