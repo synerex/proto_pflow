@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package pflow;
+
+option go_package="github.com/UCLabNU/proto_pflow";
+
+
+import "google/protobuf/timestamp.proto";
+
+// People Flow Service message
+message PFlow
+{
+    uint32 id = 1;
+    string area = 2;
+    google.protobuf.Timestamp start_time= 3;
+    google.protobuf.Timestamp end_time= 4;
+    repeated Point data = 5;   // message has several point data.
+    bytes option = 6;  // option used for each storage type.(Not yet used)
+}
+
+message Point 
+{
+    uint32 id = 1;
+    float longitude = 2;
+    float latitude = 3;
+    float z = 4;
+    google.protobuf.Timestamp timestamp= 5;
+    bytes option = 6;  // option used for each storage type.(Not yet used)
+}
