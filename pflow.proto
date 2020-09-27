@@ -22,11 +22,11 @@ message PFlow
 message Operation 
 {
     uint32 id = 1;
-    float longitude = 2;
-    float latitude = 3;
-    float z = 4;
+    double longitude = 2;
+    double latitude = 3;
+    double z = 4;
     string type = 5;
     google.protobuf.Timestamp timestamp = 6;
-    float elapsedtime = 7;
+    double elapsedtime = 7;
     bytes option = 8;  // option
 }
