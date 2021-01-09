@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pflow;
 
-option go_package="github.com/UCLabNU/proto_pflow";
+option go_package="github.com/synerex/proto_pflow";
 
 
 import "google/protobuf/timestamp.proto";
