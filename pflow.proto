@@ -29,4 +29,5 @@ message Operation
     google.protobuf.Timestamp timestamp = 6;
     double elapsedtime = 7;
     bytes option = 8;  // option
+    uint32 sid = 9;
 }
