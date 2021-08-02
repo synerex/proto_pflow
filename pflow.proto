@@ -30,4 +30,5 @@ message Operation
     double elapsedtime = 7;
     bytes option = 8;  // option
     uint32 sid = 9;
+    uint32 height = 10;
 }
